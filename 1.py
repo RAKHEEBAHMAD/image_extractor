@@ -1,13 +1,10 @@
 import os
+os.system("pip install beautifulsoup4")
+
 import requests
 from urllib.parse import urljoin, urlparse
 from io import BytesIO
 import zipfile
-
-# Install required libraries
-os.system("pip install requests beautifulsoup4")
-
-# Import necessary libraries
 from bs4 import BeautifulSoup
 import streamlit as st
 
