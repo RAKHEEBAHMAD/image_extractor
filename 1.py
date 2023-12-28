@@ -1,10 +1,15 @@
 import os
 import requests
-from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
-import streamlit as st
 from io import BytesIO
 import zipfile
+
+# Install required libraries
+os.system("pip install requests beautifulsoup4")
+
+# Import necessary libraries
+from bs4 import BeautifulSoup
+import streamlit as st
 
 def download_images(url, folder_path='downloaded_images'):
     os.makedirs(folder_path, exist_ok=True)
@@ -47,3 +52,4 @@ website_url = st.text_input("Enter the website URL:")
 if st.button("Download Images"):
     st.info("Downloading images...")
     download_images(website_url)
+    st.success("Images downloaded successfully.")
